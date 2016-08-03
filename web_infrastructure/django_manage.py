@@ -271,7 +271,7 @@ def main():
 
     changed = False
 
-    lines = out.split('\n')
+    lines = out.strip().split('\n')
     filt = globals().get(command + "_filter_output", None)
     if filt:
         filtered_output = filter(filt, out.split('\n'))
